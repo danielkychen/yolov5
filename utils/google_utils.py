@@ -22,7 +22,7 @@ def attempt_download(weights):
     file = Path(weights).name.lower()
 
     msg = weights + ' missing, try downloading from https://github.com/ultralytics/yolov5/releases/'
-    response = requests.get('https://api.github.com/repos/ultralytics/yolov5/releases/latest').json()  # github api
+    response = requests.get('https://api.github.com/repos/ultralytics/yolov5/releases/33223116').json()  # github api
     assets = [x['name'] for x in response['assets']]  # release assets, i.e. ['yolov5s.pt', 'yolov5m.pt', ...]
     redundant = False  # second download option
 
